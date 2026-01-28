@@ -64,43 +64,47 @@
 
   <main class="main-container">
     <section class="hero">
-      <div class="hero-img">
-        <img src="images/IMG-20260104-WA0013.jpg" alt="Eshemzy Gangan">
-      </div>
+      <div class="hero-inner">
+        <div class="hero-img">
+          <img src="images/IMG-20260104-WA0013.jpg" alt="Eshemzy Gangan">
+        </div>
 
-      <div class="hero-text">
-        <h2>Hi, its <span>Eshemzy</span></h2>
-        <p class="role">I am a <span>Developer</span></p>
+        <div class="hero-text">
+          <p class="description">Hi, its <span>Eshemzy</span></p>
+          <p class="role">I am a <span>Developer</span></p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sit velit provident obcaecati iure! Saepe nihil nostrum quam, consequuntur porro illum vel tempore possimus! Repellendus repellat similique ex dolorem possimus.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sit velit provident obcaecati iure! Saepe nihil nostrum quam, consequuntur porro illum vel tempore possimus! Repellendus repellat similique ex dolorem possimus.</p>
 
-        <button type="button" class="cta-btn">Contact Me</button>
+          <button type="button" class="cta-btn">Contact Me</button>
+        </div>
       </div>
     </section>
 
-    <section class="about">
-      <h2>ABOUT ME</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio repudiandae fugiat sunt libero quia doloribus, autem saepe accusantium deserunt quam ipsa facilis ratione, nemo magnam ab numquam. Sed, voluptatem rerum?</p>
-      <button type="button" class="cta-btn">Learn More!</button>
+    <section class="about-cont">
+      <div class="about-inner">
+        <h2>ABOUT ME</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio repudiandae fugiat sunt libero quia doloribus, autem saepe accusantium deserunt quam ipsa facilis ratione, nemo magnam ab numquam. Sed, voluptatem rerum?</p>
+        <button type="button" class="cta-btn">Learn More!</button>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div class="contact-links">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <div class="contact-links" style="grid-area: box-1;">
+        <a href="/instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="/youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="/whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="/x"><i class="fa-brands fa-twitter"></i></a>
       </div>
 
-      <div class="ft-nav-items">
-        <a href="#">FAQs</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+      <div class="ft-nav-items" style="grid-area: box-2;">
+        <a href="/ask">FAQs</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
       </div>
 
-      <div class="copyright">
+      <div class="copyright" style="grid-area: box-3;">
         <p>© 2026 Eshemzy | All Rights Reserved.</p>
       </div>
     </div>
