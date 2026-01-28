@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 32px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
 
   --size-1: 0.5rem;
   --size-2: 1rem;
@@ -34,22 +35,22 @@
 
 body,
 html {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   line-height: 1.6;
   color: var(--text-light);
   background-color: var(--bg-dark);
 }
 
 .header-inner {
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-1) var(--space-3);
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--space-2);
 }
 a.header-logo {
-  font-size: var(--size-2);
+  font-size: var(--size-3);
   text-decoration: none;
   color: var(--text-light);
   font-weight: 500;
@@ -60,26 +61,25 @@ a.header-logo {
   font-size: var(--size-3);
   color: var(--text-light);
 }
-.nav-wrapper {
+.nav-list {
   display: none;
 }
-nav ul {
+.nav-list ul {
   list-style: none;
   display: flex;
-  flex-direction: column;
   gap: var(--space-1);
 }
-nav li {
+.nav-list ul li {
   text-align: center;
 }
-nav a {
+.nav-list ul li a {
   text-decoration: none;
   color: inherit;
   display: block;
   transition: color 300ms ease;
   font-weight: 500;
 }
-nav a:hover {
+.nav-list ul li a:hover {
   color: #b916b9;
 }
 
@@ -95,14 +95,16 @@ section {
   gap: var(--space-3);
 }
 .hero-img {
-  margin: 0 auto;
+  margin-inline: auto;
   width: 100%;
-  max-width: 200px;
+  height: auto;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
+  max-width: 150px;
   overflow: hidden;
   border-radius: 50%;
   border: 3px solid purple;
-  transition: all 0.3s ease;
+  transition: border-width 0.3s ease, box-shadow 0.3s ease;
 }
 .hero-img:hover {
   border-width: 1;
@@ -110,16 +112,21 @@ section {
 }
 .hero-img img {
   object-fit: cover;
-  width: 100%;
-  display: block;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 300ms ease;
+}
+.hero-img img:hover {
+  transform: scale(1.1);
 }
 .hero-text h2 {
-  font-size: var(--size-5);
-  margin-bottom: var(--space-1);
+  font-size: var(--size-4);
 }
 .hero-text span {
   color: #b916b9;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 .hero-text h2 span {
   text-shadow: 0 0 30px #b916b9;
