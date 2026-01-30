@@ -146,6 +146,30 @@ p.role {
   text-shadow: 0 0 30px #b916b9;
   font-size: clamp(1.8rem, 1.52rem + 1.6vw, 2rem);
 }
+.project-wrapper {
+  display: grid;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.project-img {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 1;
+  transition: transform 300ms ease;
+  z-index: 2;
+}
+.project-wrapper:hover .project-img {
+  transform: scale(1.1);
+}
+.project-desc {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 1;
+  align-self: end;
+  background-color: rgba(255, 255, 255);
+  line-height: 1.2;
+  font-size: 12px;
+  color: #000;
+  z-index: 3;
+}
 .cta-btn {
   margin-top: clamp(0.3rem, -0.12rem + 2.4vw, 0.6rem);
   font-size: clamp(0.8rem, 0.52rem + 1.6vw, 1rem);
