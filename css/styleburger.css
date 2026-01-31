@@ -49,8 +49,7 @@ section {
 }
 .hero-inner,
 .about-inner,
-.projects-inner,
-.footer-inner > * {
+.projects-inner > * {
   width: 100%;
   max-width: 1100px;
   margin-inline: auto;
@@ -93,9 +92,9 @@ a.header-logo {
   color: #b916b9;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-3);
 }
 .hero-img {
@@ -186,33 +185,29 @@ p.role {
   box-shadow: 0 0 0.938rem #b916b9;
 }
 
-
 .footer-inner {
-  border-top: 1px solid #eee;
-  padding: 1rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-areas: "box-1 box-2" "box-3 box-3";
+  gap: 0.45rem;
+  border-top: 1px solid #eee;
+  padding: 2rem 1rem;
 }
-.footer-inner a {
+.social-links a:hover {
+  color: #b916b9;
+}
+.social-links {
+  display: flex;
+  gap: clamp(0.7rem, 0.28rem + 2.4vw, 1rem);
+}
+.social-links a {
+  font-size: clamp(0.9rem, 0.34rem + 3.2vw, 1.3rem);
   color: var(--text-light);
   text-decoration: none;
   transition: color 300ms ease;
 }
-.footer-inner a:hover {
-  color: #b916b9;
-}
-.contact-links,
-.ft-nav-items {
-  display: flex;
-  gap: clamp(0.7rem, 0.28rem + 2.4vw, 1rem);
-  font-size: clamp(0.7rem, 0.28rem + 2.4vw, 1rem);
-}
 .copyright {
-  text-align: center;
   font-size: clamp(0.6rem, 0.32rem + 1.6vw, 0.8rem);
 }
 
@@ -221,36 +216,21 @@ p.role {
 @media (min-width: 660px) {
    .header-inner {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
    }
-   .menu-toggle, .nav-wrapper button {
+   .menu-toggle,
+   .nav-list button {
     display: none;
    }
-   .nav-wrapper {
+   .nav-list {
     display: block;
    }
-   nav ul {
-    flex-direction: row;
-   }
 
-   .hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-4);
+   .hero-inner {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-2);
    }
-   .hero-img,
-   .hero-text {
-    flex: 1;
-   }
-  .about {
-    max-width: 800px;
-    margin-inline: auto;
-  }
   .footer-inner {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
