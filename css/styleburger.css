@@ -49,6 +49,7 @@ section {
 }
 .hero-inner,
 .about-inner,
+.projects-inner,
 .footer-inner > * {
   width: 100%;
   max-width: 1100px;
@@ -146,27 +147,32 @@ p.role {
   text-shadow: 0 0 30px #b916b9;
   font-size: clamp(1.8rem, 1.52rem + 1.6vw, 2rem);
 }
-.project-wrapper {
+
+.projects-wrapper {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 0.5rem;
+}
+.project-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  border: 3px solid #b916b9;
 }
 .project-img {
-  grid-column: 1 / span 2;
-  grid-row: 1 / 1;
+  max-width: 100%;
+  height: auto;
   transition: transform 300ms ease;
-  z-index: 2;
 }
-.project-wrapper:hover .project-img {
+.project-card:hover .project-img {
   transform: scale(1.1);
 }
-.project-desc {
-  grid-column: 1 / span 2;
-  grid-row: 1 / 1;
-  align-self: end;
-  background-color: rgba(255, 255, 255);
-  line-height: 1.2;
+.description__wrapper {
+  padding: 0.5rem;
+  background-color: #fff;
   font-size: 12px;
+  font-weight: 500;
   color: #000;
   z-index: 3;
 }
