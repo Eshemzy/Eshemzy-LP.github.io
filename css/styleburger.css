@@ -57,7 +57,7 @@ section {
 }
 .header-inner {
   padding: clamp(0.3rem, 0.02rem + 1.6vw, 0.5rem) clamp(1.3rem, 0.6rem + 4vw, 1.8rem);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #b916b9;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,12 +82,9 @@ a.header-logo {
   display: flex;
   gap: var(--space-1);
 }
-.nav-list ul li {
-  text-align: center;
-}
 .nav-list ul li a {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
   display: block;
   transition: color 300ms ease;
   font-weight: 500;
@@ -104,24 +101,20 @@ a.header-logo {
 .hero-img {
   margin-inline: auto;
   width: 100%;
-  height: auto;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
   max-width: clamp(9.375rem, 5rem + 25vw, 12.5rem);
   overflow: hidden;
   border-radius: 50%;
   border: 0.188rem solid purple;
-  transition: border-width 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 .hero-img:hover {
-  border-width: 1;
   box-shadow: 0 0 0.625rem #b916b9;
 }
 .hero-img img {
   object-fit: cover;
   max-width: 100%;
   height: auto;
-  display: inline-block;
   transform: scale(1);
   transition: transform 300ms ease;
 }
@@ -137,6 +130,7 @@ p.description,
 p.role {
   font-size: clamp(1.2rem, 0.78rem + 2.4vw, 1.5rem);
   font-weight: 500;
+  line-height: 1.2;
 }
 .hero-text span,
 .role span {
@@ -192,11 +186,9 @@ p.role {
   box-shadow: 0 0 0.938rem #b916b9;
 }
 
-.footer-inner {
-  border-top: 1px solid #eee;
-}
 
 .footer-inner {
+  border-top: 1px solid #eee;
   padding: 1rem;
   display: grid;
   align-items: center;
